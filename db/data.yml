@@ -1,0 +1,50 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - 2026-09-07 15:22:56.222798000 Z
+    - 2026-09-07 15:22:56.222801000 Z
+  - - schema_sha1
+    - a63f3d69799c90fc2d6ca11e24ffc55f09d7d7b0
+    - 2026-09-07 15:22:56.241992000 Z
+    - 2026-09-07 15:22:56.241993000 Z
+
+---
+books:
+  columns:
+  - id
+  - title
+  - author
+  - price
+  - published_date
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Fall 2027
+    -
+    -
+    -
+    - 2026-09-07 16:53:54.898696000 Z
+    - 2026-09-07 17:22:04.399834000 Z
+  - - 2
+    - Fall 2026
+    -
+    -
+    -
+    - 2026-09-07 16:56:25.919825000 Z
+    - 2026-09-07 16:56:25.919825000 Z
+  - - 3
+    - Fall 2025
+    -
+    -
+    -
+    - 2026-09-07 16:59:51.305477000 Z
+    - 2026-09-07 18:57:14.496668000 Z
