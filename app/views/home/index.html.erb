@@ -11,3 +11,8 @@
   </p>
 <% end %>
 <%= link_to("Add a Book", new_add_book_path, class: 'action new') %>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+  <% flash.discard(:notice) %>
+<% end %>

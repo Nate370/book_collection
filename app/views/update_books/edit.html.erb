@@ -5,3 +5,8 @@
   <h3>Title: </h3><%= f.text_field(:title) %>
   <%= f.submit("Update Book") %>
 <% end %>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+  <% flash.discard(:notice) %>
+<% end %>
