@@ -1,0 +1,9 @@
+<h1>Book Details</h1>
+<p><%= link_to("Return To Home Page", root_path) %></p>
+
+<h2><%= @book.title %></h2>
+
+<p>
+  <%= link_to("Edit Book", edit_update_book_path(@book), class: 'action edit') %> | 
+  <%= link_to("Delete", delete_delete_book_path(@book), class: 'action delete') %>
+</p>
