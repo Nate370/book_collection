@@ -1,0 +1,12 @@
+<h1>Add New Book</h1>
+<p><%= link_to("Return To Home Page", root_path, class: 'action index') %></p>
+
+<%= form_for(@book, url: add_books_path) do |f| %>
+  <h3>Title: </h3><%= f.text_field(:title) %>
+  <%= f.submit("Create Book") %>
+<% end %>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+  <% flash.discard(:notice) %>
+<% end %>

@@ -1,0 +1,12 @@
+<h1>Edit Book</h1>
+<p><%= link_to("Return To Home Page", root_path, class: 'action index') %></p>
+
+<%= form_for(@book, url: update_book_path(@book)) do |f| %>
+  <h3>Title: </h3><%= f.text_field(:title) %>
+  <%= f.submit("Update Book") %>
+<% end %>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+  <% flash.discard(:notice) %>
+<% end %>
