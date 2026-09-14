@@ -2,11 +2,23 @@
 <p><%= link_to("Return To Home Page", root_path, class: 'action index') %></p>
 
 <%= form_for(@book, url: update_book_path(@book)) do |f| %>
-  <h3>Title: </h3><%= f.text_field(:title) %>
+  <h3>Title: <%= f.text_field(:title) %></h3>
+  <h3>Author: <%= f.text_field(:author) %></h3>
+  <h3>Price: <%= f.number_field(:price) %></h3>
+  <h3>Published Date: <%= f.date_field(:published_date) %></h3>
   <%= f.submit("Update Book") %>
 <% end %>
 
-<% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
-  <% flash.discard(:notice) %>
+
+<% if flash[:empty] %>
+  <div class="notice"><%= flash[:empty] %></div>
+  <% flash.discard(:empty) %>
+<% end %>
+<% if flash[:negative] %>
+  <div class="notice"><%= flash[:negative] %></div>
+  <% flash.discard(:negative) %>
+<% end %>
+<% if flash[:future] %>
+  <div class="notice"><%= flash[:future] %></div>
+  <% flash.discard(:future) %>
 <% end %>
