@@ -2,9 +2,6 @@
 <p><%= link_to("Return To Home Page", root_path) %></p>
 
 <h2><%= @book.title %></h2>
-<p><b>Author:</b> <%= @book.author %></p>
-<p><b>Price:</b> <%= @book.price %></b></p>
-<p><b>Published Date:</b> <%= @book.published_date %></p>
 
 <p>
   <%= link_to("Edit Book", edit_update_book_path(@book), class: 'action edit') %> | 
