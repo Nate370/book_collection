@@ -4,6 +4,9 @@
 
 <% @books.each do |book| %>
   <h3><%= book.title %></h3>
+  <p><b>Author:</b> <%= book.author %></p>
+  <p><b>Price:</b> <%= book.price %></b></p>
+  <p><b>Published Date:</b> <%= book.published_date %></p>
   <p>
     <%= link_to("Details", show_detail_path(book), class: 'action show') %> | 
     <%= link_to("Edit", edit_update_book_path(book), class: 'action edit') %> |
