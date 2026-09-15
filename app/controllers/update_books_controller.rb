@@ -27,7 +27,7 @@ class UpdateBooksController < ApplicationController
     end
     if @book.update(book_params)
       flash[:notice]= "Book updated successfully"
-      redirect_to root_path
+      redirect_to books_path
     else
       render('edit')
     end

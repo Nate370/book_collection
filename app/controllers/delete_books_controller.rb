@@ -3,7 +3,7 @@ class DeleteBooksController < ApplicationController
     @book = Book.find(params[:id])
     @book.destroy
     flash[:notice] = "Book deleted successfully"
-    redirect_to root_path
+    redirect_to books_path
   end
 
   def delete
