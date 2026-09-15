@@ -21,7 +21,7 @@ class AddBooksController < ApplicationController
     end
     if @book.save
       flash[:notice] = "Book added successfully"
-      redirect_to root_path
+      redirect_to books_path
     else
       @book = Book.new
       render('new')

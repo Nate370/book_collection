@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  root "home#index"
+  root "user_books#index"
 
-  resources :home, only: [:index]
+  resources :user_books
+  resources :users
+
+  resources :home, only: [:index], as: :books
   resources :add_books, only: [:new, :create]
   resources :update_books, only: [:edit, :update]
   resources :show_details, only: [:show]

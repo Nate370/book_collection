@@ -1,5 +1,5 @@
 <h1>Edit Book</h1>
-<p><%= link_to("Return To Home Page", root_path, class: 'action index') %></p>
+<p><%= link_to("Return To Home Page", books_path, class: 'action index') %></p>
 
 <%= form_for(@book, url: update_book_path(@book)) do |f| %>
   <h3>Title: <%= f.text_field(:title) %></h3>
