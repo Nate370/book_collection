@@ -83,6 +83,7 @@ test:
 #
 production:
   primary: &primary_production
+    url: <%= ENV["DATABASE_URL"] %>
     <<: *default
     database: book_collection_production
     username: book_collection
