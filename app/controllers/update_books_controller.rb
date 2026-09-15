@@ -7,7 +7,7 @@ class UpdateBooksController < ApplicationController
   def update
     @book = Book.find(params[:id])
     issue = false
-    if (!@book.valid?)
+    if (not @book.valid?)
       issue = true
       flash[:empty] = "All Book attributes must be filled in"
     end
