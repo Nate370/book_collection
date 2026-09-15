@@ -7,11 +7,17 @@ class UpdateBooksController < ApplicationController
   def update
     @book = Book.find(params[:id])
     issue = false
+    if (not @book.valid?)
+      issue = true
+      flash[:empty] = "All Book attributes must be filled in"
+    end
+=begin
     if (book_params[:title] == '' or book_params[:author] == '' or
       book_params[:price] == '' or book_params[:published_date] == '')
       issue = true
       flash[:empty] = "All Book attributes must be filled in"
     end
+=end
     if (book_params[:price] != '' and book_params[:price].to_f < 0)
       issue = true
       flash[:negative] = "Book price must not be negative"
