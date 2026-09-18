@@ -37,6 +37,11 @@ gem "rexml"
 
 gem "seed_dump"
 
+gem 'devise', '~>4.9' 
+gem "omniauth", "~> 2.1" 
+gem "omniauth-rails_csrf_protection", "~> 1.0" 
+gem "omniauth-google-oauth2", "~> 1.1" 
+
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
 gem "kamal", require: false
 
